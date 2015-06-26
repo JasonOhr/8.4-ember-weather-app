@@ -1,3 +1,33 @@
-<h2 id="title">Welcome to Ember.js</h2>
+<div class="container">
+<div class="wrapper">
 
-{{outlet}}
+    <div class="weather-section ">
+      <section class=time-display>
+          <div class="time-digits hours">12</div>
+          <div class="time-digits minutes">35</div>
+      </section>
+
+      {{home-page longitude=model.location.coords.longitude latitude=model.location.coords.latitude}}
+        <!--{{model.location.coords.latitude}}-->
+        <!--{{model.location.coords.longitude}}-->
+      <div class="lower-weather-section">
+        <div class="basic-info">
+        <div class="city-name">Greenville,SC</div>
+        <div class="date">Friday, 13, Jun</div>
+        </div>
+        <div class="current-weather-icon"><img src="../assets/images/weather_img/HH_WEATHER_14.png" alt="{{icon}}"/></div>
+        <div class="current-weather">
+            <div class="current-temp">75</div><!--currently temperature-->
+            <div class="today-high">H: 86</div><!--daily temperatureMax-->
+            <div class="today-low">L: 66</div><!--daily temperatureMin-->
+            <div class="summary">Cloudy</div><!--currently summary-->
+
+        </div>
+      </div>
+      {{outlet}}
+    </div>
+</div>
+
+
+
+</div>
